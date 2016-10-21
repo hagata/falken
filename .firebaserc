@@ -1,5 +1,6 @@
 {
   "projects": {
-    "staging": "falken-f7b2f"
+    "staging": "falken-f7b2f",
+    "develop": "falken-dev"
   }
 }
