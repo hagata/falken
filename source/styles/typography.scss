@@ -1,9 +1,3 @@
-// add Sass modules here from the styles/modules directory.
-// import module partials without underscore, without .scss file extension.
-
-@import 'modules/module';
-@import 'modules/playground-intro';
-
 @font-face{
 	font-family: 'Miller';
 	src: url('../assets/fonts/Miller.eot');
@@ -30,15 +24,6 @@
 	     url('../assets/fonts/Graphik-Medium.ttf') format('truetype'),
 	     url('../assets/fonts/Graphik-Medium.svg#webfont') format('svg');
 }
-
-$primary: #1A2560;      // dark blue
-$secondary: #E9F7DF;    // light green
-$lightbg: #FBFBFB;      // light gray
-$darkbg: #F0F0F0;       // dark gray
-$text-dark: #242424;    // black
-$text-light: #686868;   // gray
-$filter: #E3E4EA;       // light blue
-$stroke: 2px solid #1A2560;
 
 h1 {
   font-family: 'Miller';
@@ -78,7 +63,6 @@ body {
   color: $text-dark;
   line-height: 1.5;
 }
-
 
 .question {
   font-family: 'Courier';
