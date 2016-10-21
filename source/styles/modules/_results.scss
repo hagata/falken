@@ -1,5 +1,6 @@
 .results {
     display: flex;
+    flex-direction: column;
     flex: 1 0 50%;
     background: $darkbg;
 }
@@ -32,6 +33,10 @@
   &__neighborhood {
     @extend .neighborhood;
     padding: 2px 8px 2px 8px;
+  }
+
+  &__shortdesc {
+    margin-left: 8px;
   }
 
 }
