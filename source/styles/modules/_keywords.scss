@@ -1,0 +1,19 @@
+.keywords {
+    display: flex;
+    height: rem(38);
+    margin-bottom: rem(16);
+
+    &__active-list {
+        list-style: none;
+    }
+
+    &__keyword {
+        align-items: center;
+        background: lightgray;
+        display: inline-flex;
+        font-size: rem(10);
+        height: 100%;
+        justify-content: center;
+        padding: 0 rem(8);
+    }
+}

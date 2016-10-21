@@ -1,6 +1,7 @@
 // add Sass modules here from the styles/modules directory.
 // import module partials without underscore, without .scss file extension.
 
+<<<<<<< HEAD
 @import 'modules/module';
 @import 'modules/playground-intro';
 
@@ -107,3 +108,16 @@ body {
   font-family: 'Miller';
   font-size: 1rem;
 }
+=======
+// globals
+@import 'global/variables';
+@import 'global/functions';
+@import 'global/layout';
+
+// Modules
+@import 'modules/stage';
+@import 'modules/conversations';
+@import 'modules/keywords';
+@import 'modules/results';
+@import 'modules/playground-intro';
+>>>>>>> implementation/setup-html-structure
