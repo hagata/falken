@@ -1,8 +1,6 @@
-# Prototype Playground
-What is it? This is a base environment, with the minimum amount of setup and dependencies to start building web prototypes.
-
-You'll be setting up Node, a Javascript environment that lets you code on your local machine. With Node, you can use NPM and Gulp. NPM is a package manager that lets you download useful tools to help you code. Gulp is a task runner that automates whatever you tell it to. It's commonly used to check for errors, compile your code, and auto refresh your browser.
-
+# Project Falken
+A hackathon inspired, NLP, app prototype.
+Built on top of prototype-playground.
 ### [Documentation and Guides](https://hagata.github.io/prototype_playground/)
 
 # Prerequisities
@@ -67,8 +65,3 @@ This project leverages the power of Gulp. You may use the following gulp command
 | watch | Runs necessary build scripts as files are modified. |
 | sass | Compile sass to `/_build` directory |
 | serve | Starts a browserSync server at `localhost:3000` |
-
-
-# Optional plugins for your text editor
-* [atom-beautify](https://atom.io/packages/atom-beautify) for higlighting nunjucks syntax in Atom
-* [nunjucks syntax](https://packagecontrol.io/packages/Nunjucks%20Syntax) for higlighting nunjucks syntax in Sublime
