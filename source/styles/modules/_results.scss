@@ -1,5 +1,37 @@
 .results {
     display: flex;
     flex: 1 0 50%;
-    background: lightblue;
+    background: $darkbg;
+}
+
+.listing {
+  margin: 1rem;
+  background: #fff;
+  border-radius: 4px;
+
+  &__copy {
+    padding: rem(12);
+  }
+
+  // &__image {
+  //   width: 100%;
+  //   background: url(../assets/apt17.png);
+  //   background-size: contain;
+  // }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__main {
+    border-bottom: $stroke;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__neighborhood {
+    @extend .neighborhood;
+    padding: 2px 8px 2px 8px;
+  }
+
 }

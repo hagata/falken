@@ -25,17 +25,17 @@
 	     url('../assets/fonts/Graphik-Medium.svg#webfont') format('svg');
 }
 
-h1 {
+h1, .input {
   font-family: 'Miller';
-  font-size: 3rem;
+  font-size: rem(60);
   color: $primary;
-  line-height: 1.5;
+  line-height: 1.2;
   font-weight: 400;
 }
 
 h2 {
   font-family: 'Miller';
-  font-size: 2rem;
+  font-size: rem(48);
   color: $primary;
   line-height: 1.5;
   font-weight: 400;
@@ -43,7 +43,7 @@ h2 {
 
 h3 {
   font-family: 'Miller';
-  font-size: 1.5rem;
+  font-size: rem(30);
   color: $primary;
   line-height: 1.5;
   font-weight: 400;
@@ -51,7 +51,7 @@ h3 {
 
 h4 {
   font-family: 'Miller';
-  font-size: 1.2rem;
+  font-size: rem(24);
   color: $primary;
   line-height: 1.5;
   font-weight: 400;
@@ -59,20 +59,22 @@ h4 {
 
 body {
   font-family: 'Graphik';
-  font-size: 0.9rem;
+  font-size: rem(16);
   color: $text-dark;
   line-height: 1.5;
 }
 
 .question {
   font-family: 'Courier';
-  font-size: 1rem;
+  font-size: rem(18);
   color: $text-light;
+	letter-spacing: -0.7px;
+	font-weight: 400;
 }
 
 .CTA {
   font-family: 'Graphik-Medium';
-  font-size: 0.8rem;
+  font-size: rem(14);
   line-height: 1.5;
   letter-spacing: 1px;
   color: $primary;
@@ -82,12 +84,14 @@ body {
 .neighborhood {
   background-color: $darkbg;
   font-family: 'Graphik';
-  font-size: 1rem;
+  font-size: rem(16);
   color: $text-dark;
 }
 
-.filter {
+.filters {
   background-color: $filter;
   font-family: 'Miller';
-  font-size: 1rem;
+  font-size: rem(15);
+	color: $primary;
+	font-weight: 400;
 }

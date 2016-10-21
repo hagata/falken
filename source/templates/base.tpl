@@ -12,7 +12,7 @@
   <!-- Do not write code here. See readme for templating -->
   {% endblock %}
 
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
   <script src="scripts/app.js"></script>
 </body>
 </html>
