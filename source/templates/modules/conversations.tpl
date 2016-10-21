@@ -15,8 +15,8 @@
           <p class="question">
           Where do you want to live?
           </p>
-          <div class="textarea-container">
-            <textarea placeholder="A studio near the park"></textarea>
+          <div data-module="Search" class="textarea-container">
+            <textarea class="textarea__area" placeholder="A studio near the park"></textarea>
             <div class="textarea-size"></div>
           </div>
         </div>
