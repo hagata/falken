@@ -1,0 +1,15 @@
+.stage {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 100vh;
+
+    @media screen and (min-width: $medium-screen){
+        flex-wrap: wrap;
+    }
+
+    * {
+        outline: 1px dashed lightblue;
+    }
+}

@@ -1,0 +1,12 @@
+.conversations {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 100%;
+    padding: rem(10);
+
+    border: 1px solid tomato;
+
+    @media screen and (min-width: $medium-screen){
+        flex: 1 0 50%;
+    }
+}

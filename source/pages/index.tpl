@@ -1,6 +1,9 @@
 {% extends '../templates/base.tpl' %}
 {% block content %}
 
-{% include 'modules/playground-intro.tpl' %}
+<main class="stage">
+    {% include 'modules/conversations.tpl' %}
+    {% include 'modules/results.tpl' %}
+</main>
 
 {% endblock %}
