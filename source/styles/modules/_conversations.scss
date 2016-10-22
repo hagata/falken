@@ -57,7 +57,6 @@
     }
 
     textarea, .textarea-size {
-      min-height: rem(72);
       box-sizing: border-box;
       padding: 4px;
       border: none;
@@ -89,7 +88,7 @@
       word-wrap: break-word;
       overflow-wrap: break-word;
       word-break: break-all;
-      height: 30vh;
+      min-height: 30vh;
     }
 
     textarea::-webkit-input-placeholder {
