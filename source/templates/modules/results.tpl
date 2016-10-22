@@ -1,4 +1,4 @@
-<section class="results">
+<section class="results" data-module="Filter">
   <!-- <div class="result-filter">
     <span class="sort"><span>Sort by:</span> Price</span>
     <span class="map CTA">Map View</span>
