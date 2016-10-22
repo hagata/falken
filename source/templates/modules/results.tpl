@@ -1,6 +1,10 @@
 <section class="results">
+  <!-- <div class="result-filter">
+    <span class="sort"><span>Sort by:</span> Price</span>
+    <span class="map CTA">Map View</span>
+  </div> -->
+<div class="listings">
   {% for listing in listings %}
-    <div class="listings">
 
       <div class="listing">
         <div class="listing__image">
@@ -18,7 +22,6 @@
         </div>
       </div>
 
-    </div>
   {% endfor %}
-
+</div>
 </section>

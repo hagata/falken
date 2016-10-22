@@ -30,6 +30,7 @@ class Search extends Module {
   load() {
     this.bindEvents_();
     this.autoSize_();
+    console.log('loaded search module');
   }
 }
 

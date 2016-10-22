@@ -7,20 +7,30 @@
     height: 100vh;
 }
 
+#carat {
+  font-size: rem(6);
+  opacity: 0.9;
+}
+
+.result-filter {
+  display: flex;
+  justify-content: space-between;
+  margin: rem(28) 1rem;
+}
+
+b {
+  font-weight: 600;
+  font-family: 'Graphik-Medium'
+}
+
 .listing {
   margin: 1rem;
   background: #fff;
   border-radius: 4px;
 
   &__copy {
-    padding: rem(12);
+    padding: rem(0) rem(12) rem(12) rem(14);
   }
-
-  // &__image {
-  //   width: 100%;
-  //   background: url(../assets/apt17.png);
-  //   background-size: contain;
-  // }
 
   &__img {
     width: 100%;
