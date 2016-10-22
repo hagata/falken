@@ -5,6 +5,8 @@
     padding: rem(20);
     position: relative;
     background-color: $lightbg;
+    height: 100vh;
+    width: 50vw;
 
     @media screen and (min-width: $medium-screen){
         flex: 1 0 50%;
@@ -69,9 +71,14 @@
 
     &__area {
       height: 100%;
-      position: absolute;
+      // position: absolute;
       resize: none;
       white-space: normal;
+    }
+
+    textarea:focus {
+      outline:0;
+      resize: none;
     }
 
     .textarea-size {
@@ -99,6 +106,7 @@ svg.mic {
   bottom: 0;
   right: 0;
   margin: rem(36);
+  cursor: pointer;
 }
 
 @keyframes thinking {

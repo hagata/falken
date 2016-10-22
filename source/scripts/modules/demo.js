@@ -11,13 +11,13 @@ class Demo extends Module {
   }
 
   manageSubscriptions_() {
-    pubsub.subscribe('search.listings', this.manageSearchListings_);
+    // pubsub.subscribe('search.listings', this.manageSearchListings_);
   }
 
   manageSearchListings_(data){
-    console.group('search');
-    console.log('Data from pubsub', data);
-    console.groupEnd();
+    // console.group('search');
+    // console.log('Data from pubsub', data);
+    // console.groupEnd();
   }
   
   /**
