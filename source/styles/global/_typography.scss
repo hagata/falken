@@ -43,11 +43,12 @@ h2 {
 
 h3 {
   font-family: 'Miller';
-  font-size: rem(30);
+  font-size: rem(24);
   color: $primary;
   line-height: 1.2;
   font-weight: 400;
 	text-align: center;
+	margin-bottom: rem(8px);
 }
 
 h4 {
@@ -71,6 +72,8 @@ body {
   color: $text-light;
 	letter-spacing: -0.7px;
 	font-weight: 400;
+	transition: all 1s ease;
+	opacity: 1;
 }
 
 .CTA {
@@ -89,6 +92,7 @@ body {
   font-family: 'Graphik';
   font-size: rem(14);
   color: $text-dark;
+	border-radius: 2px;
 }
 
 .filters {
@@ -99,4 +103,8 @@ body {
 	font-weight: 400;
 	border-radius: 2px;
 	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
 }

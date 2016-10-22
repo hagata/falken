@@ -3,6 +3,8 @@
     height: rem(38);
     margin-bottom: rem(16);
     position: relative;
+    opacity: 1;
+    transition: all 2s ease;
 
     &__active-list {
         list-style: none;

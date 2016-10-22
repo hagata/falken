@@ -68,38 +68,29 @@
     }
 
     textarea, .textarea-size {
-      border: none;
       box-sizing: border-box;
-      color: $primary;
+      padding: 4px;
+      border: none;
+      overflow: hidden;
+      width: 100%;
       font-family: 'Miller';
       font-size: rem(60);
-      font-weight: 400;
+      color: $primary;
       line-height: 1.2;
+      font-weight: 400;
+<<<<<<< HEAD
       resize: none;
+=======
       min-height: 10rem;
-      overflow-wrap: break-word;
-      overflow: hidden;
-      padding: 4px;
       transition: height 100ms ease-in;
-      white-space: pre-wrap;
-      width: 100%;
-      // word-break: break-all;
-      word-wrap: break-word;
-
-      &__highlight {
-        background-color: $secondary;
-      }
-
-      &--placeholder {
-        opacity: .05;
-      }
+>>>>>>> origin/master
     }
 
     &__area {
       height: 100%;
+
       // position: absolute;
       resize: none;
-      opacity: 0;
       white-space: normal;
     }
 
@@ -109,9 +100,12 @@
     }
 
     .textarea-size {
-      // visibility: hidden;
+      visibility: hidden;
       position: absolute;
-      pointer-events: none;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      word-break: break-all;
       // min-height: 30vh;
     }
 

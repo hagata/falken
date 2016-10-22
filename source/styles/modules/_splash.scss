@@ -1,19 +1,12 @@
 .splash {
   background: $primary url('../assets/home1.jpg') center center;
   background-size: cover;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   position: absolute;
-}
-
-.splash-intro {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  opacity: 1;
+  transition: all 1s ease;
+  pointer-events: none;
 }
 
 .banner {
@@ -23,13 +16,15 @@
 }
 
 .small-bot {
-  width: 85%;
-  height: 30%;
-  margin: auto;
+  width: 20vw;
+  height: 30vh;
+  transition: all 1s ease;
+  left: 25%;
 
   .splash-question {
     @extend h3;
-    padding: rem(30);
+    padding-bottom: rem(16);
+    margin: auto;
   }
 
   .cursor {
@@ -47,4 +42,9 @@
 
 .hide {
   display: none;
+}
+
+.fade {
+  opacity: 0;
+  position: absolute;
 }
