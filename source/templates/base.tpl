@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Prototype Playground</title>
+  <title>Apt.ai | The smart way to find apartments</title>
   <link rel="stylesheet" href="styles/global.css">
 </head>
 <body>
