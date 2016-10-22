@@ -15,26 +15,14 @@
       background-color: #fff;
       height: 100%;
       display: flex;
-    }
 
-    @keyframes thinking {
-        0%{background-position: 0% 0%}
-        5%{background-position: 25% 0%}
-        10%{background-position: 50% 0%}
-        15%{background-position: 75% 0%}
-        25%{background-position: 100% 0%}
-        30%{background-position: 100% 25%}
-        35%{background-position: 100% 50%}
-        40%{background-position: 100% 75%}
-        50%{background-position: 100% 100%}
-        55%{background-position: 75% 100%}
-        60%{background-position: 50% 100%}
-        65%{background-position: 25% 100%}
-        75%{background-position: 0% 100%}
-        80%{background-position: 0% 75%}
-        85%{background-position: 0% 50%}
-        90%{background-position: 0% 25%}
-        100%{background-position: 0% 0%}
+      &__output{
+        font-family: 'Courier';
+        font-size: rem(18);
+        color: $text-light;
+        letter-spacing: -0.7px;
+        font-weight: 400;
+      }
     }
 
     .thinking {
@@ -80,7 +68,7 @@
       font-weight: 400;
     }
 
-    textarea {
+    &__area {
       height: 100%;
       position: absolute;
       resize: none;
@@ -89,6 +77,7 @@
 
     .textarea-size {
       visibility: hidden;
+      position: absolute;
       white-space: pre-wrap;
       word-wrap: break-word;
       overflow-wrap: break-word;
@@ -111,4 +100,24 @@ svg.mic {
   bottom: 0;
   right: 0;
   margin: rem(36);
+}
+
+@keyframes thinking {
+    0%{background-position: 0% 0%}
+    5%{background-position: 25% 0%}
+    10%{background-position: 50% 0%}
+    15%{background-position: 75% 0%}
+    25%{background-position: 100% 0%}
+    30%{background-position: 100% 25%}
+    35%{background-position: 100% 50%}
+    40%{background-position: 100% 75%}
+    50%{background-position: 100% 100%}
+    55%{background-position: 75% 100%}
+    60%{background-position: 50% 100%}
+    65%{background-position: 25% 100%}
+    75%{background-position: 0% 100%}
+    80%{background-position: 0% 75%}
+    85%{background-position: 0% 50%}
+    90%{background-position: 0% 25%}
+    100%{background-position: 0% 0%}
 }
