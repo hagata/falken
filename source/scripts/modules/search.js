@@ -36,23 +36,33 @@ class Search extends Module {
 
   userInputHandler_(e) {
     e.preventDefault();
-
     const query = e.currentTarget.querySelector('.textarea__area').value;
-    console.log('val', e.currentTarget);
+
     if (!this.validate_(query)) {
       return;
     }
+    this.handleAPIrequest_(query);
+  }
+
+  handleAPIrequest_(query) {
     API_AI.get(query, this.contexts_).then(data => {
       data.json().then(results => {
         this.updateBotResponse_(results.result.fulfillment.speech);
         console.log('.json!', results.result);
         this.contexts_ = results.contexts_;
         this.form_.reset();
+
+        // TODO: Add pubsub
+
+          // TODO: Call Search from subscription, pass parameters.
+
+        // If action search.listings fire off all the things
       });
     });
+
   }
 
-  updateBotResponse_(response){
+  updateBotResponse_(response) {
     this.chatOutput_.innerHTML = response;
   }
 
@@ -63,7 +73,6 @@ class Search extends Module {
     this.input_.addEventListener('input', this.autoSize_);
     this.form_.addEventListener('submit', this.userInputHandler_);
   }
-
 
   /**
    * Loads module.
