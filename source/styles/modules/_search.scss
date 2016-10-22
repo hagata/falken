@@ -10,10 +10,12 @@
 
     &__cta {
         @extend .CTA;
-        font-size: rem(10);
         background: none;
         border:none;
         color: $text-light;
+        font-size: rem(10);
+        letter-spacing: 1px;
+        opacity: 0.5;
 
         &--hidden {
             display: none;
