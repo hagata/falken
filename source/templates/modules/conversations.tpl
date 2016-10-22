@@ -10,14 +10,18 @@
         <p class="CTA collapse">Done</p>
     </div>
 
-    <div class="conversations-io">
+    <div class="conversations-io" data-module="Search">
         <div class="conversations-QA">
-          <p class="question">
+          <p class="conversations-io__output">
           Where do you want to live?
           </p>
-          <div data-module="Search" class="textarea-container">
-            <textarea class="textarea__area" placeholder="A studio near the park"></textarea>
+          <div  class="textarea-container">
+            <form action="" class="search__form">
+            <textarea class="textarea__area" autofocus placeholder="A studio near the park"></textarea>
             <div class="textarea-size"></div>
+            <button class="search__cta" type='submit'>Hit enter</button>
+            </form>
+
           </div>
         </div>
 
@@ -26,7 +30,13 @@
 
     </div>
 
-
     </div>
+    <script>
+
+    const voiceButton = document.querySelector('.voice-box');
+    voiceButton.addEventListener('click', e => {
+        console.log(`I'm listening…`)
+    })
+    </script>
 
 </section>
