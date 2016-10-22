@@ -50,11 +50,16 @@
       padding: 1rem;
       align-items: center;
       display: flex;
+
+      &__output {
+        font-family: 'Courier';
+        font-size: rem(18);
+        color: $text-light;
+        letter-spacing: -0.7px;
+        font-weight: 400;
+      }
     }
 
-    .conversations-QA {
-      width: 100%;
-    }
 
     .textarea-container {
       position: relative;

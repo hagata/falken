@@ -1,0 +1,11 @@
+.search {
+    outline: 1px dashed deeppink;
+
+    &__cta {
+        @extend .CTA;
+        font-size: rem(10);
+        background: none;
+        border:none;
+        color: $text-light;
+    }
+}
