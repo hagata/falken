@@ -30,8 +30,14 @@ class Filter extends Module {
           listings = res.listings;
 
           let results = listings.filter(function(listing) {
+            let city;
+            if (data['geo-city'] === 'New York') {
+              city = 'NY';
+            } else {
+              city = data['geo-city'];
+            }
 
-            if (data['geo-city'] && !(listing.Url.includes(data['geo-city']))) {
+            if (data['geo-city'] && !(listing.Url.includes(city))) {
               return false;
             }
             if (data['unit-currency'] && data['unit-currency'].amount < listing.MinPrice) {
