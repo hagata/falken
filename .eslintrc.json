@@ -1,0 +1,11 @@
+{
+    "globals":{
+        "document": false,
+        "window": false
+    },
+    "rules": {
+        "no-unused-expressions": ["error", { "allowTernary": true }],
+        "no-console": ["warn"]
+    },
+    "extends": "google"
+}

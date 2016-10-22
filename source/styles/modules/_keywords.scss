@@ -2,6 +2,7 @@
     display: flex;
     height: rem(38);
     margin-bottom: rem(16);
+    position: relative;
 
     &__active-list {
         list-style: none;
@@ -9,11 +10,35 @@
 
     &__keyword {
         align-items: center;
-        background: lightgray;
         display: inline-flex;
-        font-size: rem(10);
         height: 100%;
         justify-content: center;
         padding: 0 rem(8);
+        @extend .filters;
+        margin: 0 0 0 rem(10);
+    }
+
+    &__keyword:first-child {
+        margin: 0;
+    }
+
+    &__keyword::after {
+        content: "";
+        background: url(../assets/x.svg) no-repeat;
+        display: inline-flex;
+        width: rem(12);
+        height: rem(12);
+        float: left;
+        margin: 0 0 0 rem(10);
+    }
+
+    .collapse {
+      align-items: center;
+      display: inline-flex;
+      height: 100%;
+      justify-content: center;
+      padding: 0 rem(8);
+      position: absolute;
+      right: 0;
     }
 }

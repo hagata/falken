@@ -2,11 +2,77 @@
     display: flex;
     flex-direction: column;
     flex: 1 0 100%;
-    padding: rem(10);
+    padding: rem(20);
+    position: relative;
+    background-color: $lightbg;
 
     border: 1px solid tomato;
 
     @media screen and (min-width: $medium-screen){
         flex: 1 0 50%;
     }
+
+    .conversations-io {
+      border: $stroke;
+      padding: 2rem;
+      background-color: #fff;
+      height: 100%;
+      align-items: center;
+      display: flex;
+    }
+
+    .conversations-QA {
+      width: 100%;
+    }
+
+    .textarea-container {
+      position: relative;
+      width: 100%;
+    }
+
+    textarea, .textarea-size {
+      min-height: rem(72);
+      box-sizing: border-box;
+      padding: 4px;
+      border: none;
+      overflow: hidden;
+      width: 100%;
+      font-family: 'Miller';
+      font-size: rem(60);
+      color: $primary;
+      line-height: 1.2;
+      font-weight: 400;
+    }
+
+    textarea {
+      height: 100%;
+      position: absolute;
+      resize:none;
+      white-space: normal;
+    }
+
+    .textarea-size {
+      visibility: hidden;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      word-break: break-all;
+      height: 30vh;
+    }
+
+    textarea::-webkit-input-placeholder {
+      font-family: 'Miller';
+      font-size: rem(60);
+      color: $primary;
+      line-height: 1.2;
+      font-weight: 400;
+      opacity: 0.5;
+    }
+}
+
+svg.mic {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: rem(36);
 }
