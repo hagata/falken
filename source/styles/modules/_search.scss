@@ -14,5 +14,9 @@
         background: none;
         border:none;
         color: $text-light;
+
+        &--hidden {
+            display: none;
+        }
     }
 }

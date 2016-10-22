@@ -21,7 +21,7 @@
             <form action="" class="search__form">
             <textarea class="textarea__area" autofocus placeholder="A studio near the park"></textarea>
             <div class="textarea-size"></div>
-            <button class="search__cta" type='submit'>Hit enter</button>
+            <button class="search__cta search__cta--hidden" type='submit'>Hit enter</button>
             </form>
 
           </div>

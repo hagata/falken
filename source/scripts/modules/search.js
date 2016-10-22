@@ -10,6 +10,9 @@ class Search extends Module {
     this.input_ = this.node.querySelector('.textarea__area');
     this.textareaSize = this.node.querySelector('.textarea-size');
     this.chatOutput_ = this.node.querySelector('.conversations-io__output');
+
+    this.submitButton_ = this.form_.querySelector('.search__cta');
+
     this.autoSize_ = this.autoSize_.bind(this);
     this.userInputHandler_ = this.userInputHandler_.bind(this);
     this.keyHandler_ = this.keyHandler_.bind(this);
@@ -20,7 +23,9 @@ class Search extends Module {
 
   autoSize_(e) {
     let inputValue = this.input_.value;
-
+    if (inputValue.length > 0) {
+      this.submitButton_.classList.remove('search__cta--hidden');
+    }
     if (inputValue.length >= 140) {
       e.preventDefault();
       this.handleInputError_('Try to fit your dream apartment in a tweet');
