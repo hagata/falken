@@ -67,10 +67,13 @@
       color: $primary;
       line-height: 1.2;
       font-weight: 400;
+      min-height: 10rem;
+      transition: height 100ms ease-in;
     }
 
     &__area {
       height: 100%;
+
       // position: absolute;
       resize: none;
       white-space: normal;
@@ -88,7 +91,7 @@
       word-wrap: break-word;
       overflow-wrap: break-word;
       word-break: break-all;
-      min-height: 30vh;
+      // min-height: 30vh;
     }
 
     textarea::-webkit-input-placeholder {
