@@ -1,14 +1,13 @@
 import {Demo} from '../modules/demo';
 import {Search} from '../modules/search';
 import {Filter} from '../modules/filter';
+import {Splash} from '../modules/splash';
 
 const modules = {
   Search: Search,
   Demo: Demo,
   Filter: Filter,
   Splash: Splash
-
-import {Splash} from '../modules/splash';
 
 };
 
