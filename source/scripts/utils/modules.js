@@ -1,9 +1,11 @@
 import {Demo} from '../modules/demo';
 import {Search} from '../modules/search';
+import {Filter} from '../modules/filter';
 
 const modules = {
   Search: Search,
-  Demo: Demo
+  Demo: Demo,
+  Filter: Filter
 };
 
 const appModules = {};

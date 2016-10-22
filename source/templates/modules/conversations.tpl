@@ -10,7 +10,6 @@
         <p class="CTA collapse">Done</p>
     </div>
 
-
     <div class="conversations-io thinking" data-module="Search">
       <div class="conversation-bg">
         <div class="conversations-QA">

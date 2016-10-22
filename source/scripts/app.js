@@ -14,4 +14,3 @@ import {loadModules} from './utils/modules.js';
   loadModules();
 
 })();
-
