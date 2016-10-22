@@ -12,11 +12,20 @@ class Search extends Module {
     this.chatOutput_ = this.node.querySelector('.conversations-io__output');
     this.autoSize_ = this.autoSize_.bind(this);
     this.userInputHandler_ = this.userInputHandler_.bind(this);
+    this.keyHandler_ = this.keyHandler_.bind(this);
     this.load();
   }
 
   autoSize_() {
+    console.warn('AUTOSIZE');
     this.textareaSize.innerHTML = this.input_.value + '\n';
+  }
+
+  keyHandler_(e) {
+    if (e.keyCode === 13) {
+      console.log('ENTER');
+      this.userInputHandler_(e);
+    }
   }
 
   handleInputError_(msg) {
@@ -37,7 +46,7 @@ class Search extends Module {
 
   userInputHandler_(e) {
     e.preventDefault();
-    const query = e.currentTarget.querySelector('.textarea__area').value;
+    const query = this.node.querySelector('.textarea__area').value;
 
     if (!this.validate_(query)) {
       return;
@@ -61,7 +70,6 @@ class Search extends Module {
         // If action search.listings fire off all the things
       });
     });
-
   }
 
   updateBotResponse_(response) {
@@ -73,6 +81,7 @@ class Search extends Module {
    */
   bindEvents_() {
     this.input_.addEventListener('input', this.autoSize_);
+    this.input_.addEventListener('keydown', this.keyHandler_);
     this.form_.addEventListener('submit', this.userInputHandler_);
   }
 

@@ -5,7 +5,11 @@ import {Filter} from '../modules/filter';
 const modules = {
   Search: Search,
   Demo: Demo,
-  Filter: Filter
+  Filter: Filter,
+  Splash: Splash
+
+import {Splash} from '../modules/splash';
+
 };
 
 const appModules = {};
