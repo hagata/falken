@@ -15,11 +15,11 @@
 
     <div class="conversations-io" data-module="Search">
       <div class="conversation-bg">
-        <div class="conversations-QA conversations-io__output">
-        <p class="splash-question">
+        <div class="conversations-QA">
+        <p class="splash-question ">
           Where do you want to live?<span class="cursor">|</span>
         </p>
-        <p class="question hide">
+        <p class="question hide conversations-io__output">
         Where do you want to live?
         </p>
           <div  class="textarea-container hide">
