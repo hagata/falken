@@ -6,8 +6,8 @@
 <div class="listings">
   {% for listing in listings %}
 
-      <a href={{listing.Url}}>
         <div class="listing">
+          <a href={{listing.Url}}>
           <div class="listing__image">
             <img src="{{listing.Image}}" class="listing__img">
           </div>

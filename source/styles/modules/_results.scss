@@ -26,6 +26,7 @@
   margin: 1rem;
   background: #fff;
   border-radius: 4px;
+  overflow: hidden;
 
   &__copy {
     padding: rem(0) rem(12) rem(12) rem(14);
@@ -47,11 +48,12 @@
 
   &__neighborhood {
     @extend .neighborhood;
-    padding: 2px 8px 2px 8px;
+    padding: 4px 8px 4px 8px;
   }
 
   &__shortdesc {
-    margin-left: 8px;
+    margin-left: 6px;
+    color: $text-dark;
   }
 
 }
