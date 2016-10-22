@@ -16,43 +16,49 @@ class Filter extends Module {
     pubsub.subscribe('search.listings', this.manageSearchListings_);
   }
 
-  manageSearchListings_(data){
+  manageSearchListings_(data) {
     console.group('search');
     console.log('Data from pubsub', data);
     console.groupEnd();
 
-
     let listings = [];
 
     fetch('assets/listings.json')
-      .then((response) => {
-        response.json().then((res) => {
+      .then(response => {
+        response.json().then(res => {
           // console.log(res);
           listings = res.listings;
           // console.log(listings);
 
           let results = listings.filter(function(listing) {
-            if (listing.Bed === data['unit-beds']['number-integer'])
+            // console.log(data['unit-beds'])
+            if ('unit-beds' in data && 'number-integer' in Object(data['unit-beds']) && listing.Bed === data['unit-beds']['number-integer']) {
               return true;
+            }
+            if ('intangible' in data && data.intangible.length > 1 && listing.Description.includes(data.intangible)) {
+              return true;
+            }
+            if ('geo-city' in data && data['geo-city'].length > 1 && listing.Description.includes(data['geo-city'])) {
+              return true;
+            }
           });
 
           this.renderResults_(results);
         });
       });
+  }
 
-}
-
-  renderResults_(data){
+  renderResults_(data) {
     // get results div and empty it
     while (this.resultsContainer_.firstChild) {
       this.resultsContainer_.removeChild(this.resultsContainer_.firstChild);
     }
 
     // loop over data
-      for (const listing of data) {
-        let a = document.createElement('a');
-        a.href = listing.Url;
-        let tmpl = `
+    for (const listing of data) {
+      let a = document.createElement('a');
+      a.href = listing.Url;
+      let tmpl = `
 
           <div class="listing>"
             <div class="listing__image">
@@ -68,9 +74,9 @@ class Filter extends Module {
                 <span class="listing__shortdesc">Title</span>
               </div>
           `;
-        a.innerHTML = tmpl;
-        this.resultsContainer_.appendChild(a);
-      }
+      a.innerHTML = tmpl;
+      this.resultsContainer_.appendChild(a);
+    }
   }
 
   /**
