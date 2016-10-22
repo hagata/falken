@@ -43,10 +43,11 @@ h2 {
 
 h3 {
   font-family: 'Miller';
-  font-size: rem(24);
+  font-size: rem(30);
   color: $primary;
-  line-height: 1.5;
+  line-height: 1.2;
   font-weight: 400;
+	text-align: center;
 }
 
 h4 {
@@ -80,6 +81,7 @@ body {
   color: $primary;
   text-transform: uppercase;
 	margin-top: 2px;
+	cursor: pointer;
 }
 
 .neighborhood {
@@ -96,4 +98,5 @@ body {
 	color: $primary;
 	font-weight: 400;
 	border-radius: 2px;
+	cursor: pointer;
 }

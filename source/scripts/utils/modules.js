@@ -1,8 +1,10 @@
 import {Demo} from '../modules/demo';
 import {Search} from '../modules/search';
+import {Splash} from '../modules/splash';
 
 const modules = {
   Search: Search,
+  Splash: Splash,
   Demo: Demo
 };
 

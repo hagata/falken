@@ -1,0 +1,50 @@
+.splash {
+  background: $primary url('../assets/home1.jpg') center center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+.splash-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.banner {
+  width: 85%;
+  z-index: 2;
+  margin: rem(20) auto;
+}
+
+.small-bot {
+  width: 85%;
+  height: 30%;
+  margin: auto;
+
+  .splash-question {
+    @extend h3;
+    padding: rem(30);
+  }
+
+  .cursor {
+    animation: blink 1s steps(5, start) infinite;
+    margin-top: -6px;
+  }
+
+  @keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+}
+
+.hide {
+  display: none;
+}
