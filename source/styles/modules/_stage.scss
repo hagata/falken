@@ -1,9 +1,11 @@
+html, body {
+  background: $filter;
+}
 .stage {
-    align-items: stretch;
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    min-height: 100vh;
 
     @media screen and (min-width: $medium-screen){
         flex-wrap: wrap;
