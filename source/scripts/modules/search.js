@@ -13,17 +13,30 @@ class Search extends Module {
     this.autoSize_ = this.autoSize_.bind(this);
     this.userInputHandler_ = this.userInputHandler_.bind(this);
     this.keyHandler_ = this.keyHandler_.bind(this);
+
+    this.isThinking_ = false;
     this.load();
   }
 
-  autoSize_() {
-    console.warn('AUTOSIZE');
-    this.textareaSize.innerHTML = this.input_.value + '\n';
+  autoSize_(e) {
+    let inputValue = this.input_.value;
+
+    if (inputValue.length >= 140) {
+      e.preventDefault();
+      this.handleInputError_('Try to fit your dream apartment in a tweet');
+      return false;
+    }
+    this.textareaSize.innerHTML = inputValue + '\n';
+
+    this.input_.setAttribute("style", `height: ${this.textareaSize.offsetHeight}px`);
+  }
+
+  toggleThinking_() {
+    this.node.classList.toggle('thinking');
   }
 
   keyHandler_(e) {
     if (e.keyCode === 13) {
-      console.log('ENTER');
       this.userInputHandler_(e);
     }
   }
@@ -46,6 +59,7 @@ class Search extends Module {
 
   userInputHandler_(e) {
     e.preventDefault();
+    this.toggleThinking_();
     const query = this.node.querySelector('.textarea__area').value;
 
     if (!this.validate_(query)) {
@@ -65,7 +79,9 @@ class Search extends Module {
         this.form_.reset();
 
         // TODO: Add pubsub
-
+        setTimeout(() => {
+          this.toggleThinking_();
+        }, 500);
           // TODO: Call Search from subscription, pass parameters.
         // If action search.listings fire off all the things
       });

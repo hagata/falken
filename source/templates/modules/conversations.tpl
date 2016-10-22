@@ -11,7 +11,7 @@
     </div>
 
 
-    <div class="conversations-io thinking" data-module="Search">
+    <div class="conversations-io" data-module="Search">
       <div class="conversation-bg">
         <div class="conversations-QA">
           <p class="conversations-io__output">
