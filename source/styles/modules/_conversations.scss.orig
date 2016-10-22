@@ -78,9 +78,12 @@
       color: $primary;
       line-height: 1.2;
       font-weight: 400;
+<<<<<<< HEAD
       resize: none;
+=======
       min-height: 10rem;
       transition: height 100ms ease-in;
+>>>>>>> origin/master
     }
 
     &__area {

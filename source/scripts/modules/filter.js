@@ -73,7 +73,7 @@ class Filter extends Module {
       a.href = listing.Url;
       let tmpl = `
 
-          <div class="listing>"
+          <div class="listing">
             <div class="listing__image">
               <img src="${listing.Image}" class="listing__img">
             </div>
@@ -84,7 +84,7 @@ class Filter extends Module {
               </div>
               <div class="listing__sub">
                 <span class="listing__neighborhood">Neighborhood</span>
-                <span class="listing__shortdesc">Title</span>
+                <span class="listing__shortdesc">Lorem ipsum dolor sic amet consectetur adipiscing elit.</span>
               </div>
           `;
       a.innerHTML = tmpl;

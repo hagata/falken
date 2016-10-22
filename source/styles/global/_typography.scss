@@ -75,6 +75,8 @@ a {
   color: $text-light;
 	letter-spacing: -0.7px;
 	font-weight: 400;
+	transition: all 1s ease;
+	opacity: 1;
 }
 
 .CTA {
@@ -103,4 +105,8 @@ a {
 	font-weight: 400;
 	border-radius: 2px;
 	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
 }
