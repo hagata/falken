@@ -45,6 +45,23 @@ class Search extends Module {
     if (e.keyCode === 13) {
       this.userInputHandler_(e);
     }
+    this.textareaSize.classList.remove('textarea-size--placeholder');
+    this.highlightKeywordsHandler_(e);
+  }
+
+  highlightKeywordsHandler_(e) {
+    let testString = e.currentTarget.value;
+    let testArry = testString.split(' ');
+
+    testArry.map((item, index, orgArr) => {
+
+      if (item === 'bed' || item === 'bedroom' || item === 'room' || item === 'rooms') {
+
+        orgArr[index] = `<span class="textarea-size__highlight">${item}</span>`;
+      }
+    });
+    let resolvedString = testArry.join(' ');
+    this.textareaSize.innerHTML = resolvedString;
   }
 
   handleInputError_(msg) {
@@ -83,6 +100,8 @@ class Search extends Module {
         const parameters = results.result.parameters;
         pubsub.publish('search.listings', parameters);
         this.form_.reset();
+        this.textareaSize.classList.add('textarea-size--placeholder');
+        this.input_.setAttribute('placeholder', query);
 
         // TODO: Add pubsub
         setTimeout(() => {
