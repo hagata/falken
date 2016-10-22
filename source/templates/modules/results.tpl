@@ -11,8 +11,10 @@
             <h3 class="listing__price">{{listing.price}}</h3>
             <h3 class="listing__bdbr">{{listing.bdbr}}</h3>
           </div>
-          <span class="listing__neighborhood">{{listing.neighborhood}}</span>
-          <span class="listing__shortdesc">{{listing.shortdesc}}</span>
+          <div class="listing__sub">
+            <span class="listing__neighborhood">{{listing.neighborhood}}</span>
+            <span class="listing__shortdesc">{{listing.shortdesc}}</span>
+          </div>
         </div>
       </div>
 

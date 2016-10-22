@@ -3,6 +3,8 @@
     flex-direction: column;
     flex: 1 0 50%;
     background: $darkbg;
+    overflow: scroll;
+    height: 100vh;
 }
 
 .listing {
@@ -28,6 +30,10 @@
     border-bottom: $stroke;
     display: flex;
     justify-content: space-between;
+  }
+
+  &__sub {
+    margin-top: rem(10px);
   }
 
   &__neighborhood {
