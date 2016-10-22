@@ -13,9 +13,9 @@
         <p class="CTA collapse">Done</p>
     </div>
 
-    <div class="conversations-io thinking" data-module="Search">
+    <div class="conversations-io" data-module="Search">
       <div class="conversation-bg">
-        <div class="conversations-QA">
+        <div class="conversations-QA conversations-io__output">
         <p class="splash-question">
           Where do you want to live?<span class="cursor">|</span>
         </p>

@@ -24,7 +24,7 @@ class Filter extends Module {
 
     let listings = [];
 
-    fetch('listings.json')
+    fetch('assets/listings.json')
       .then((response) => {
         response.json().then((res) => {
           // console.log(res);
@@ -35,10 +35,8 @@ class Filter extends Module {
             if (listing.Bed === data['unit-beds']['number-integer'])
               return true;
           });
-          console.log('RESULTS: ');
-          console.log(results);
-          this.renderResults_(results);
 
+          this.renderResults_(results);
         });
       });
 
@@ -55,7 +53,7 @@ class Filter extends Module {
         let a = document.createElement('a');
         a.href = listing.Url;
         let tmpl = `
-         
+
           <div class="listing>"
             <div class="listing__image">
               <img src="${listing.Image}" class="listing__img">
@@ -72,9 +70,6 @@ class Filter extends Module {
           `;
         a.innerHTML = tmpl;
         this.resultsContainer_.appendChild(a);
-
-      console.log(tmpl);
-
       }
   }
 
