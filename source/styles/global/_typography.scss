@@ -71,6 +71,8 @@ body {
   color: $text-light;
 	letter-spacing: -0.7px;
 	font-weight: 400;
+	transition: all 1s ease;
+	opacity: 1;
 }
 
 .CTA {

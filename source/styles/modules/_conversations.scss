@@ -6,7 +6,11 @@
     position: relative;
     background-color: $lightbg;
     height: 100vh;
-    width: 50vw;
+    width: 100vw;
+    transition: all 350ms;
+    transition-timing-function: cubic-bezier(.12,.82,.31,1);
+    opacity: 1;
+    left: 0%;
 
     @media screen and (min-width: $medium-screen){
         flex: 1 0 50%;
@@ -41,6 +45,11 @@
       align-items: center;
       display: flex;
 
+      .conversations-QA {
+        margin: auto;
+        transition: all 500ms ease;
+      }
+
       &__output {
         font-family: 'Courier';
         font-size: rem(18);
@@ -54,6 +63,8 @@
     .textarea-container {
       position: relative;
       width: 100%;
+      opacity: 1;
+      transition: all 1s ease;
     }
 
     textarea, .textarea-size {
@@ -68,6 +79,7 @@
       color: $primary;
       line-height: 1.2;
       font-weight: 400;
+      resize: none;
     }
 
     &__area {
@@ -108,6 +120,18 @@ svg.mic {
   right: 0;
   margin: rem(36);
   cursor: pointer;
+}
+
+.home-copy {
+  margin: auto;
+  text-align: center;
+  opacity: 1;
+}
+
+.apt {
+  font-family: Courier;
+  font-size: rem(20);
+  color: $text-light;
 }
 
 @keyframes thinking {
