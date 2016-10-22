@@ -83,6 +83,7 @@ class Search extends Module {
         const parameters = results.result.parameters;
         pubsub.publish('search.listings', parameters);
         this.form_.reset();
+        this.input_.setAttribute('placeholder', query);
 
         // TODO: Add pubsub
         setTimeout(() => {
