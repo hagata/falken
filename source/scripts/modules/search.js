@@ -1,5 +1,6 @@
 import Module from './base';
 import {API_AI} from '../api/api.ai.api';
+import pubsub from '../utils/pubsub';
 
 // Need a module loader.
 class Search extends Module {
@@ -50,12 +51,13 @@ class Search extends Module {
         this.updateBotResponse_(results.result.fulfillment.speech);
         console.log('.json!', results.result);
         this.contexts_ = results.contexts_;
+        const parameters = results.result.parameters;
+        pubsub.publish('search.listings', parameters);
         this.form_.reset();
 
         // TODO: Add pubsub
 
           // TODO: Call Search from subscription, pass parameters.
-
         // If action search.listings fire off all the things
       });
     });
