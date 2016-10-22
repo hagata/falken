@@ -2,7 +2,6 @@ import Module from './base';
 import {API_AI} from '../api/api.ai.api';
 import pubsub from '../utils/pubsub';
 
-// Need a module loader.
 class Search extends Module {
   constructor(node) {
     super(node);
@@ -26,14 +25,16 @@ class Search extends Module {
     if (inputValue.length > 0) {
       this.submitButton_.classList.remove('search__cta--hidden');
     }
+
     if (inputValue.length >= 140) {
       e.preventDefault();
       this.handleInputError_('Try to fit your dream apartment in a tweet');
       return false;
     }
-    this.textareaSize.innerHTML = inputValue + '\n';
 
-    this.input_.setAttribute("style", `height: ${this.textareaSize.offsetHeight}px`);
+    this.textareaSize.innerHTML = inputValue + ' \n';
+    this.input_.setAttribute("style", `height: ${this.textareaSize.offsetHeight}px; min-height:10rem`);
+
   }
 
   toggleThinking_() {
