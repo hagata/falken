@@ -57,25 +57,37 @@
     }
 
     textarea, .textarea-size {
-      box-sizing: border-box;
-      padding: 4px;
       border: none;
-      overflow: hidden;
-      width: 100%;
+      box-sizing: border-box;
+      color: $primary;
       font-family: 'Miller';
       font-size: rem(60);
-      color: $primary;
-      line-height: 1.2;
       font-weight: 400;
+      line-height: 1.2;
       min-height: 10rem;
+      overflow-wrap: break-word;
+      overflow: hidden;
+      padding: 4px;
       transition: height 100ms ease-in;
+      white-space: pre-wrap;
+      width: 100%;
+      // word-break: break-all;
+      word-wrap: break-word;
+
+      &__highlight {
+        background-color: $secondary;
+      }
+
+      &--placeholder {
+        opacity: .05;
+      }
     }
 
     &__area {
       height: 100%;
-
       // position: absolute;
       resize: none;
+      opacity: 0;
       white-space: normal;
     }
 
@@ -85,12 +97,9 @@
     }
 
     .textarea-size {
-      visibility: hidden;
+      // visibility: hidden;
       position: absolute;
-      white-space: pre-wrap;
-      word-wrap: break-word;
-      overflow-wrap: break-word;
-      word-break: break-all;
+      pointer-events: none;
       // min-height: 30vh;
     }
 
