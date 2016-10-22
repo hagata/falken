@@ -1,6 +1,5 @@
 <section class="splash"></section>
 
-  <!-- <img class="banner" src="../../assets/banner.png"> -->
   <section data-module="Splash" class="conversations small-bot">
 
     <div class="keywords fade">
@@ -13,8 +12,7 @@
         <p class="CTA collapse">Done</p>
     </div>
 
-
-    <div class="conversations-io thinking" data-module="Search">
+    <div class="conversations-io" data-module="Search">
       <div class="conversation-bg">
       <div class="home-copy">
         <p class="apt">
@@ -26,14 +24,14 @@
       </div>
         <div class="conversations-QA fade">
 
-        <p class="question fade">
+        <p class="question fade conversations-io__output">
         Where do you want to live?
         </p>
           <div class="textarea-container">
             <form action="" class="search__form">
             <textarea class="textarea__area" autofocus placeholder="A studio near the park"></textarea>
             <div class="textarea-size"></div>
-            <button class="search__cta" type='submit'>Hit enter</button>
+            <button class="search__cta search__cta--hidden" type='submit'>Hit enter</button>
             </form>
 
           </div>

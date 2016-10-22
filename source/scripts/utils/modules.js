@@ -1,11 +1,14 @@
 import {Demo} from '../modules/demo';
 import {Search} from '../modules/search';
+import {Filter} from '../modules/filter';
 import {Splash} from '../modules/splash';
 
 const modules = {
   Search: Search,
-  Splash: Splash,
-  Demo: Demo
+  Demo: Demo,
+  Filter: Filter,
+  Splash: Splash
+
 };
 
 const appModules = {};
