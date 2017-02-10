@@ -14,9 +14,9 @@ class APIAI {
       });
 
     const config = {
-      url: 'https://api.api.ai/v1/query?v=20161022',
+      url: 'https://api.api.ai/v1/query',
       params: {
-        v: '20150910',
+        v: '20161022',
         query: query,
         lang: 'en',
         sessionID: this.sessionID_,
