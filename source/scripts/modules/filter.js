@@ -26,21 +26,40 @@ class Filter extends Module {
     fetch('assets/listings.json')
       .then(response => {
         response.json().then(res => {
-          // console.log(res);
+
           listings = res.listings;
-          // console.log(listings);
 
           let results = listings.filter(function(listing) {
-            // console.log(data['unit-beds'])
-            if ('unit-beds' in data && 'number-integer' in Object(data['unit-beds']) && listing.Bed === data['unit-beds']['number-integer']) {
-              return true;
+            let city;
+            if (data['geo-city'] === 'New York') {
+              city = 'NY';
+            } else {
+              city = data['geo-city'];
             }
-            if ('intangible' in data && data.intangible.length > 1 && listing.Description.includes(data.intangible)) {
-              return true;
+
+            if (data['geo-city'] && !(listing.Url.includes(city))) {
+              return false;
+            }
+            if (data['unit-currency'] && data['unit-currency'].amount < listing.MinPrice) {
+              return false;
+            }
+            if (listing.MinPrice === 0) {
+              return false;
+            }
+            if ('unit-beds' in data && 'number-integer' in Object(data['unit-beds']) && listing.Bed !== data['unit-beds']['number-integer']) {
+              return false;
+            }
+            if (data.intangible) {
+              if (listing.Description.includes(data.intangible)) {
+                return true;
+              } else {
+                return false;
+              }
             }
             if ('geo-city' in data && data['geo-city'].length > 1 && listing.Description.includes(data['geo-city'])) {
               return true;
             }
+            return true;
           });
 
           this.renderResults_(results);
